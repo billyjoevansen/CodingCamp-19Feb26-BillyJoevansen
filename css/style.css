@@ -206,12 +206,12 @@ input.shake {
     max-width 0.3s ease,
     padding 0.3s ease,
     border-color 0.3s ease;
-  --panel-open-width: 260px;
+  --panel-open-width: 300px;
 }
 
 .filter-panel.open {
   max-width: var(--panel-open-width);
-  padding: 15px 6px;
+  padding: 12px 6px;
   border-color: var(--accent);
 }
 
