@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <div class="main-section">
+            <h1>Todo List</h1>
+
+            <div class="input-row">
+                <input type="text" id="taskInput" placeholder="Add a todo ..." autocomplete="off">
+                <input type="date" id="dateInput">
+                <button id="add">+</button>
+            </div>
+
+            <div class="filter-delete-row">
+                <div class="filter-bar">
+                    <button id="filterToggle" class="filter-toggle-btn" aria-expanded="false">
+                        <span>Filter</span>
+                        <svg class="chevron" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                    <div class="filter-panel" id="filterPanel">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="pending">Pending</button>
+                        <button class="filter-btn" data-filter="done">Done</button>
+                    </div>
+                </div>
+                <button id="delete">Delete All</button>
+            </div>
+
+            <div class="stats">
+                <span id="statsText">0 tasks</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskBody"></tbody>
+                </table>
+                <div class="empty-state" id="emptyState">
+                    <p>No tasks found</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
