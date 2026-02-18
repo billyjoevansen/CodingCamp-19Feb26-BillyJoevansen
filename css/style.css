@@ -188,7 +188,7 @@ input.shake {
 }
 
 .filter-toggle-btn[aria-expanded='true'] .chevron {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
 .filter-panel {
